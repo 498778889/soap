@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>表单标题</legend>
+            <label for="rg">滑动条</label>
+            <input type="range" id="rg" max="100" min="0" value="50" step="10">
+
+            <br>
+            <label for="pg" >进度条</label>
+            <progress id="pg" max="100" min="0" value="50"></progress>
+
+            <br>
+            <label for="mt">度量计</label>
+            <meter id="mt" high="60" low="40"  max="100" min="0" value="90"></meter>
+            <br>
+            <label for="addr">住址</label>
+            <input type="text" id="addr" list="dlist">
+            <datalist id="dlist">
+                <option value="东湖区">东湖区</option>
+                <option value="青山湖区">青山湖区</option>
+                <option value="西湖区">西湖区</option>
+                <option value="红谷滩新区">红谷滩新区</option>
+                <option value="新建区">新建区</option>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/layui.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <form action="login.action" method="POST"
+        style="width: 600px;margin: 0 auto;margin-top: 200px; padding:50px;border: #0C0C0C 1px solid;border-radius: 10px;">
+        <span style="font-size: 30px;margin: 0 auto;display: block;padding: 9px 15px;width: 80px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;">
+            登录
+        </span>
+        <div style="margin: 20px">
+            <span class="layui-form-label">用户名</span>
+            <div class="layui-input-block">
+                <input type="text" name="userName" id="userName" class="layui-input" />
+            </div>
+        </div>
+
+        <div style="margin: 20px">
+            <span class="layui-form-label">密码</span>
+            <div class="layui-input-block">
+                <input type="password" name="password" id="password" class="layui-input">
+            </div>
+        </div>
+
+        <a href="./register.html" class="layui-btn" style="float: right">去注册</a>
+        <input type="submit" name="confirm" id="confirm" class="layui-btn" style="float: right;margin-right: 20px" value="登录" />
+    </form>
+</body>
+
+</html>

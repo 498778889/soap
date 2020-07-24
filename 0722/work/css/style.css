@@ -1,0 +1,1403 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 75%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+img {
+    display: inline-block;
+}
+
+:focus {
+    outline: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+optgroup {
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+code,
+kbd,
+samp,
+tt {
+    font-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    *font-size: 100%;
+}
+
+ol,
+ul {
+    list-style: none outside none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+sup,
+sub {
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+:link,
+:visited,
+ins {
+    text-decoration: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+body {
+    font-size: 75%;
+    font-family: Tahoma, Arial;
+}
+
+#wrapper {
+    width: 100%;
+    height: 135px;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 20;
+    background: url(https://imedl.sogoucdn.com/index/header/wrapper_bg.png) repeat-x;
+}
+
+#wrapper_main {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header {
+    width: 1000px;
+    height: 135px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#product {
+    width: 1000px;
+    height: 30px;
+    float: left;
+}
+
+#topnav {
+    width: 800px;
+    height: 30px;
+    float: left;
+}
+
+#topnav ul li {
+    float: left;
+}
+
+#topnav ul li div {
+    float: left;
+}
+
+.topnav_name a {
+    float: left;
+    height: 16px;
+    font-size: 12px;
+    color: #7a7a7a;
+    font-family: '宋体';
+    margin-top: 7px;
+    margin-top: 9px\9;
+}
+
+.topnav_name a:hover {
+    color: #ff8049;
+}
+
+.separator {
+    width: 25px;
+    height: 25px;
+    float: left;
+    background: url(https://imedl.sogoucdn.com/index/header/separator.png) center 2px no-repeat;
+}
+
+.separator.last {
+    background: none;
+}
+
+#user_info {
+    width: 200px;
+    height: 30px;
+    float: left;
+}
+
+#user_info ul li {
+    float: right;
+}
+
+#user_info ul li div {
+    float: left;
+}
+
+#user_info ul li div a {
+    max-width: 100px;
+    float: left;
+    display: block;
+    font-size: 12px;
+    color: #7a7a7a;
+    margin-top: 7px;
+    cursor: pointer;
+    margin-top: 9px\9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#user_info ul li div a:hover {
+    color: #ff8049;
+    text-decoration: none;
+}
+
+#logo a {
+    width: 193px;
+    height: 40px;
+    float: left;
+    background: url(https://imedl.sogoucdn.com/index/header/logo.png) no-repeat;
+    margin-top: 15px;
+}
+
+#search_input {
+    width: 325px;
+    height: 32px;
+    background: url(https://imedl.sogoucdn.com/index/header/search_box.png) no-repeat;
+    padding: 8px 0 0 3px;
+    position: absolute;
+    top: 50px;
+    left: 675px;
+    overflow: hidden;
+}
+
+#search_input.focus {
+    background: url(https://imedl.sogoucdn.com/index/header/search_box_focus.png) no-repeat;
+}
+
+#search_btn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 968px;
+    top: 50px;
+}
+
+#search_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#searchTip {
+    border: medium none;
+    outline: 0 none;
+    margin: 0px 0 0 6px;
+    padding: 0;
+    height: 16px;
+    width: 270px;
+    line-height: 16px;
+    _display: inline;
+}
+
+#search_keyword_list {
+    width: 323px;
+    position: absolute;
+    left: 675px;
+    top: 82px;
+    border: 1px solid #e3e3e3;
+    border-top: 0px;
+    background: #FFF;
+    z-index: 100;
+    display: none;
+}
+
+#search_keyword_list ul li {
+    width: 325px;
+    height: 13px;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+
+#search_keyword_list ul li a {
+    width: 100%;
+    height: 13px;
+    float: left;
+}
+
+#search_keyword_list ul li img {
+    float: left;
+}
+
+#search_keyword_list ul li div {
+    float: left;
+    font-size: 14px;
+    margin: -3px 0 0 10px;
+    color: #999999;
+}
+
+#search_list_btm {
+    float: left;
+    width: 180px;
+    height: 10px;
+}
+
+#nav_list {
+    width: 1000px;
+    height: 35px;
+    float: left;
+    margin-top: 15px;
+}
+
+#nav_list ul li {
+    height: 35px;
+    float: left;
+    margin-right: 30px;
+    _display: inline;
+}
+
+#nav_list ul li a {
+    height: 35px;
+    float: left;
+}
+
+#nav_list ul li a:hover {
+    background: #e94f0d;
+}
+
+#nav_list ul li a.current {
+    background: #e94f0d;
+}
+
+.nav_name {
+    float: left;
+    margin: 5px 21px 0;
+    _display: inline;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+    cursor: pointer;
+}
+
+#nav_list ul li.nav_list_last {
+    margin-right: 0px;
+}
+
+#zmeit {
+    position: relative;
+}
+
+#zmeit_new {
+    position: absolute;
+    background: url(https://imedl.sogoucdn.com/index/2.0/new.png) no-repeat 0px 0px;
+    width: 26px;
+    height: 14px;
+    top: -16px;
+    left: 143px;
+}
+
+
+#bar3 {
+    background: url("/images/index_ad_dl_bz.jpg?1.3") no-repeat;
+}
+
+#ban_ul {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    width: 998px;
+    margin-bottom: 10px;
+}
+
+#ban_ul li {
+    position: absolute;
+    list-style: none;
+}
+
+#ban_ul .con {
+    position: absolute;
+}
+
+#ban_ul .bar {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 70px;
+    overflow: hidden
+}
+
+#ban_a1 {
+    display: block;
+    position: absolute;
+    top: 205px;
+    left: 313px;
+    width: 221px;
+    height: 62px;
+    background: url(images/banner/down_3_6.jpg) no-repeat scroll 0 0 transparent;
+}
+
+#ban_a2 {
+    background: url(about:blank);
+    display: block;
+    height: 68px;
+    left: 603px;
+    position: absolute;
+    top: 199px;
+    width: 179px;
+}
+
+#ban_a3 {
+    background: url(about:blank);
+    display: block;
+    height: 55px;
+    left: 583px;
+    position: absolute;
+    top: 174px;
+    width: 193px;
+}
+
+#ban_a2t {
+    color: #64240C;
+    display: block;
+    left: 713px;
+    position: absolute;
+    text-decoration: underline;
+    top: 134px;
+    width: 60px;
+    background: url(about:blank);
+}
+
+#con_img {
+    background: url(images/banner/banner_3_6.jpg) no-repeat scroll 0 0 transparent;
+}
+
+#con_img a {
+    display: block;
+    width: 858px;
+    height: 300px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+#main_index {
+    width: 734px;
+    height: 900px;
+    float: left;
+    margin-top: 13px;
+}
+
+#skin_title {
+    width: 734px;
+    height: 29px;
+    background: url(https://imedl.sogoucdn.com/index/2.0/side_title.png) no-repeat;
+}
+
+#skin_list {
+    width: 734px;
+    height: 500px;
+}
+
+#skin_list ul li {
+    width: 333px;
+    height: 157px;
+    float: left;
+    margin: 0 34px 13px 0;
+    background: url(https://imedl.sogoucdn.com/index/2.0/skin_border.png) no-repeat;
+    _display: inline;
+}
+
+.img {
+    width: 320px;
+    height: 110px;
+    margin: auto;
+    margin-top: 7px;
+    position: relative;
+}
+
+.subscript {
+    position: absolute;
+    top: 5px;
+    right: -26px;
+    height: 50px;
+    width: 26px;
+}
+
+.subscript_w {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "宋体";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    letter-spacing: 2px;
+}
+
+.r_sk_inf {
+    width: 333px;
+    height: 27px;
+    margin-top: 13px;
+}
+
+.skin_content span {
+    width: 243px;
+    height: 12px;
+    float: left;
+    margin-top: 6px;
+    font-size: 12px;
+    display: block;
+    _display: inline;
+}
+
+.skin_content span a {
+    color: #696969;
+}
+
+.skin_download a {
+    width: 72px;
+    height: 25px;
+    float: left;
+    margin-left: 17px;
+    display: block;
+    _display: inline;
+}
+
+.skin_download a:hover {
+    background: url(https://imedl.sogoucdn.com/index/2.0/skin_download_hover.png) no-repeat;
+}
+
+.skin_content span a:hover {
+    color: #ff8049;
+}
+
+
+#skin_ex_func_title {
+    width: 734px;
+    height: 24px;
+    float: left;
+    background: url(https://imedl.sogoucdn.com/index/2.0/ex_func_title.png) no-repeat;
+}
+
+#skin_ex_func_list {
+    height: 130px;
+    float: left;
+    margin-top: 14px;
+}
+
+#skin_ex_func_list ul li {
+    width: 90px;
+    height: 130px;
+    float: left;
+    margin-right: 32px;
+    _display: inline;
+}
+
+
+
+#dict_show_title {
+    width: 734px;
+    height: 18px;
+    float: left;
+    margin-top: 13px;
+    background: url(https://imedl.sogoucdn.com/index/2.0/dict_show_title.png) no-repeat;
+}
+
+#dict_show_list {
+    height: 130px;
+    float: left;
+    margin-top: 14px;
+}
+
+#dict_show_list ul li {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: 32px;
+    _display: inline;
+}
+
+#dict_show_list ul li span {
+    width: 80px;
+    height: 14px;
+    margin: 7px auto;
+    text-align: center;
+    display: block;
+    _display: inline;
+}
+
+#dict_show_list ul li span a {
+    color: #818181;
+    font-size: 12px;
+}
+
+#dict_show_list ul li span a:hover {
+    color: #ff8049;
+}
+
+.down_ex_func {
+    width: 76px;
+    height: 23px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 7px;
+    _display: inline;
+    background: url(https://imedl.sogoucdn.com/index/2.0/down_ex_func3.png) no-repeat;
+}
+
+#down_ex_func2 {
+    background-position: -76px 0;
+}
+
+#down_ex_func3 {
+    background-position: -152px 0;
+}
+
+#down_ex_func4 {
+    background-position: -228px 0;
+}
+
+#down_ex_func5 {
+    background-position: -304px 0;
+}
+
+#down_ex_func6 {
+    background-position: -380px 0;
+}
+
+#down_ex_func1:hover {
+    background-position: 0 -23px;
+}
+
+#down_ex_func2:hover {
+    background-position: -76px -23px;
+}
+
+#down_ex_func3:hover {
+    background-position: -152px -23px;
+}
+
+#down_ex_func4:hover {
+    background-position: -228px -23px;
+}
+
+#down_ex_func5:hover {
+    background-position: -304px -23px;
+}
+
+#down_ex_func6:hover {
+    background-position: -380px -23px;
+}
+
+
+
+#sidebar {
+    width: 266px;
+    height: 900px;
+    float: left;
+    margin-top: 3px;
+    _display: inline;
+}
+
+/*
+    #search_input{ width:263px;height:25px;padding: 2px 0 0 3px;border: medium none;outline: 0 none; background:url(//imedl.sogoucdn.com/index/2.0/seach_border.png) no-repeat;}
+#search_btn{ width:20px; height:24px; float:left;_display:inline;}
+#search_btn a{display: block;width: 100%;height: 100%;}
+*/
+#new_activity {
+    width: 266px;
+    float: left;
+    margin-top: 10px;
+    _display: inline;
+}
+
+#new_activity_title {
+    width: 266px;
+    height: 29px;
+    float: left;
+    background: url(https://imedl.sogoucdn.com/index/2.0/new_activity.png) no-repeat;
+    _display: inline;
+}
+
+#new_activity ul li {
+    width: 266px;
+    height: 33px;
+    float: left;
+    background: url(https://imedl.sogoucdn.com/index/2.0/activity_bg.png) no-repeat;
+    _display: inline;
+}
+
+#new_activity ul li a {
+    width: 240px;
+    height: 14px;
+    float: left;
+    margin: 7px 0 0 15px;
+    font-size: 12px;
+    color: #696969;
+    _display: inline;
+}
+
+#new_activity ul li a:hover {
+    color: #ff8049 !important;
+}
+
+#focus_us {
+    width: 266px;
+    height: 174px;
+    float: left;
+    margin-top: 20px;
+    background: url(https://imedl.sogoucdn.com/index/2.0/focus_ewn.png) no-repeat;
+    _display: inline;
+}
+
+#focus_us ul li {
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: 36px 60px 0 18px;
+    _display: inline;
+}
+
+#focus_us ul li a {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#sinaWeibo a {
+    width: 106px;
+    height: 24px;
+    float: left;
+    margin: 62px 0 0 147px;
+    _display: inline;
+}
+
+#keFu a {
+    width: 106px;
+    height: 24px;
+    float: left;
+    margin: 17px 0 0 147px;
+    _display: inline;
+}
+
+/*
+        #sohu {margin-right:0 !important;}
+#sina a {background:url(//imedl.sogoucdn.com/index/2.0/focusus_hover.png) no-repeat scroll 0 0;}
+#qq a {background:url(//imedl.sogoucdn.com/index/2.0/focusus_hover.png) no-repeat scroll -24px 0;}
+#sohu a {background:url(//imedl.sogoucdn.com/index/2.0/focusus_hover.png) no-repeat scroll -48px 0;}
+*/
+#download_list {
+    width: 100%;
+    padding-top: 19px;
+    height: 173px;
+    float: left;
+    margin-top: 16px;
+    background: url(https://img04.sogoucdn.com/app/a/11130001/5afbd36307f32.jpg) -0px 0px no-repeat;
+    _display: inline;
+}
+
+#download_list ul li {
+    width: 266px;
+    height: 58px;
+    float: left;
+    position: relative
+}
+
+#download_list ul li a {
+    display: block;
+    _display: block;
+    width: 68px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #dedede;
+    background: #f1f2f2;
+    color: #333333;
+    text-align: center;
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+
+#download_list ul li a:hover {
+    background: #e7e7e7;
+}
+
+#skin_pic {
+    width: 266px;
+    height: 288px;
+    float: left;
+    margin-top: 25px;
+    background: url(https://img04.sogoucdn.com/app/a/11130001/5df9ebe081541.jpg) no-repeat;
+    _display: inline;
+}
+
+.ftbox {
+    width: 100%;
+    line-height: 24px;
+    padding: 20px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ftbox a {
+    color: #8e8d8d;
+    text-decoration: none;
+}
+
+.ftbox a:hover {
+    text-decoration: underline;
+}
+
+.focus {
+    width: 1000px;
+    height: 400px;
+    position: relative;
+}
+
+
+.focus li {
+    width: 550px;
+    height: 200px;
+    padding: 25px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    display: none;
+}
+
+.focus li h5,
+.focus li p,
+.focus li a.button,
+.focus li a.imgBox {
+    position: absolute;
+    z-index: 50;
+}
+
+
+.focus li a.button {
+    width: 100px;
+    height: 30px;
+    background: #333;
+    cursor: pointer;
+    display: none;
+}
+
+.focus li a.button:hover {
+    background: #666;
+}
+
+.focus li a.imgBox {
+    display: block;
+}
+
+.focus li a.imgBox img,
+.focus li h5 img,
+.focus li p img {
+    position: absolute;
+}
+
+.focus .btn {
+    padding: 0 9px;
+    left: 316px;
+    position: absolute;
+    width: 367px;
+    height: 49px;
+    top: 0;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    z-index: 50;
+}
+
+#banner_swap_btn1,
+#banner_swap_btn2,
+#banner_swap_btn3 {
+    width: 73px;
+    height: 24px;
+    background: url(https://imedl.sogoucdn.com/index/2.0/banner_7_1_swap_btn.png) no-repeat;
+    display: block;
+    float: left;
+    margin: 18px 0 0 51px;
+    cursor: pointer;
+    _display: inline;
+}
+
+#banner_swap_btn1:hover,
+#banner_swap_btn1.on {
+    background-position: 0 -24px;
+}
+
+#banner_swap_btn2:hover,
+#banner_swap_btn2.on {
+    background-position: 0 -24px;
+}
+
+#banner_swap_btn1 {
+    background-position: -73px 0;
+    margin-left: 50px;
+}
+
+#banner_swap_btn1:hover,
+#banner_swap_btn1.on {
+    background-position: -73px -24px;
+}
+
+#banner_swap_btn3 {
+    background-position: -146px 0;
+}
+
+#banner_swap_btn3:hover,
+#banner_swap_btn3.on {
+    background-position: -146px -24px;
+}
+
+.banner_swap_depart {
+    background: #cecece;
+    height: 20px;
+    width: 1px;
+    display: block;
+    float: left;
+    margin: 20px 0 0 50px;
+}
+
+
+
+#banner0_part1 {
+    left: 130px;
+    top: 80px;
+}
+
+#banner0_part2 {
+    left: 626px;
+    top: 85px;
+}
+
+#banner0_part3 {
+    left: 626px;
+    top: 193px;
+}
+
+#banner0_date {
+    left: 645px;
+    top: 132px;
+    position: absolute;
+    display: block;
+    width: 190px;
+    height: 40px;
+    line-height: 21px;
+    color: #999999;
+    font-family: "微软雅黑";
+}
+
+#banner1_part1 {
+    left: -10px;
+    top: 0px;
+}
+
+#banner1_part2 {
+    left: 670px;
+    top: 22px;
+}
+
+#banner1_part3 {
+    left: 720px;
+    top: 260px;
+}
+
+#banner1_part4 {
+    left: -26px;
+    top: 16px;
+    display: none;
+    z-index: 100;
+    _z-index: -20;
+}
+
+#banner1_date {
+    left: 572px;
+    top: 244px;
+    position: absolute;
+    display: block;
+    width: 190px;
+    height: 40px;
+    line-height: 21px;
+    color: #58281f;
+    font-family: "微软雅黑";
+}
+
+#banner1_part5 {
+    left: 869px;
+    top: 177px;
+    position: absolute;
+    display: block;
+    width: 71px;
+    height: 21px;
+    line-height: 21px;
+}
+
+#banner2_part1 {
+    left: 35px;
+    top: 66px;
+}
+
+#banner2_part2 {
+    left: 620px;
+    top: 45px;
+}
+
+#banner2_part3 {
+    left: 760px;
+    top: 260px;
+}
+
+#banner2_part4 {
+    left: 215px;
+    top: 72px;
+}
+
+
+.banner_sides {
+    z-index: 9;
+    position: absolute;
+    top: 135px;
+    width: 100%;
+    height: 400px;
+}
+
+.banner_side {
+    z-index: 9;
+    position: absolute;
+    top: 0px;
+    background-color: #FBF1E5;
+    width: 100%;
+    height: 400px;
+    display: none;
+    left: 0;
+}
+
+.banner_swap {
+    z-index: 8;
+    margin: 0 auto;
+    *width: 1000px;
+    width: 1000px;
+    width: 1000px;
+    *width: 999px;
+    width: 999px\9;
+    height: 374px;
+    position: relative;
+}
+
+.banner_sides .btns {
+    width: 100%;
+    height: 49px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+}
+
+.banner_sides .btn {
+    padding: 0 9px;
+    background: url(https://imedl.sogoucdn.com/index/2.0/banner_swap_btn_bg.png) scroll 0 1px no-repeat;
+    left: 317px;
+    position: absolute;
+    width: 348px;
+    height: 49px;
+    top: 0;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    z-index: 50;
+}
+
+.banner_sides .btn span.on {
+    background: #000;
+}
+
+#banner_side0 {
+    background: #EEF9FF url(https://img03.sogoucdn.com/app/a/11130001/5ef1d8cb64054.jpg) no-repeat center center;
+    display: block;
+}
+
+#banner_side1 {
+    background: url(https://imedl.sogoucdn.com/index/2.0/bannerside_2.2.2.jpg) repeat-x;
+}
+
+#banner_side2 {
+    background: url(https://imedl.sogoucdn.com/index/2.0/banner_side2.png) repeat-x;
+}
+
+#banner_8year {
+    width: 226px;
+    height: 280px;
+    position: absolute;
+    right: 50px;
+    top: 55px;
+    background: url('https://imedl.sogoucdn.com/index/2.0/8year_btn.png');
+}
+
+#banner0_link {
+    position: absolute;
+    right: 36px;
+    top: 140px;
+    display: inline-block;
+    width: 154px;
+    height: 50px;
+    background: url('https://imedl.sogoucdn.com/index/2.0/8year_btn.png') -296px -74px no-repeat;
+}
+
+#banner0_link1 {
+    position: absolute;
+    right: 36px;
+    top: 205px;
+    display: inline-block;
+    width: 154px;
+    height: 50px;
+    background: url('https://imedl.sogoucdn.com/index/2.0/8year_btn.png') -296px -150px no-repeat;
+}
+
+#banner0_link2 {
+    position: absolute;
+    right: 120px;
+    bottom: 35px;
+    display: inline-block;
+    width: 241px;
+    height: 56px;
+    background: url('https://imedl.sogoucdn.com/index/9.2/btn_for_down_9.5_2.png') 0 0 no-repeat;
+}
+
+#banner0_link2:hover {
+    background-position: 0 -56px;
+}
+
+#version_for_check {
+    display: none !important;
+}
+
+#banner0_link3 {
+    position: absolute;
+    right: 1px;
+    bottom: 35px;
+    display: inline-block;
+    width: 90px;
+    height: 22px;
+    background: url('https://imedl.sogoucdn.com/index/9.2/btn_for_mobile_9.2.png') 0 0 no-repeat;
+}
+
+#banner0_link3:hover {
+    background-position: 0 -22px;
+}
+
+#banner0_link4 {
+    position: absolute;
+    right: 2px;
+    bottom: 60px;
+    display: inline-block;
+    width: 89px;
+    height: 89px;
+    background: url('https://imedl.sogoucdn.com/index/4.0/mobile_qrcode_8.4.png') 0 0 no-repeat;
+}
+
+#banner0_link4 {
+    background: url(https://img.shouji.sogou.com/wapdl/hole/201909/03/shoujiime_20190903.jpg) no-repeat scroll 50% 50%
+}
+
+#banner0_text {
+    position: absolute;
+    left: 659px;
+    top: 210px;
+    width: 320px;
+    text-align: right;
+    line-height: 20px;
+    color: #666666;
+    font-size: 12px;
+    font-family: 'tahoma', '宋体';
+}
+
+#banner0_text1 {
+    position: absolute;
+    left: 5px;
+    top: 15px;
+    width: 215px;
+    text-align: center;
+    line-height: 30px;
+    color: #6a0c0a;
+    font-size: 18px;
+    font-family: '微软雅黑', '宋体';
+}
+
+#banner0_text2 {
+    position: absolute;
+    right: 25px;
+    top: 261px;
+    width: 175px;
+    text-align: left;
+    line-height: 20px;
+    color: #a0a0a0;
+    font-size: 14px;
+    font-family: 'tahoma', '宋体';
+}
+
+#banner0_text3 {
+    position: absolute;
+    right: 195px;
+    bottom: 125px;
+    width: 164px;
+    text-align: left;
+    line-height: 18px;
+    color: #FFE99C;
+    font-size: 15px;
+    font-family: '微软雅黑', 'Arial';
+}
+
+#banner0_text4 {
+    position: absolute;
+    right: 120px;
+    bottom: 125px;
+    text-align: right;
+    line-height: 20px;
+    color: rgb(61, 129, 186);
+    font-size: 12px;
+    font-family: '微软雅黑', 'Arial';
+}
+
+#banner0_text4 a {
+    color: #FFE99C;
+    text-decoration: underline;
+    width: 65px;
+    height: 20px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+#banner0_text5 {
+    position: absolute;
+    right: 120px;
+    bottom: 98px;
+    text-align: right;
+    line-height: 20px;
+    color: #FFE99C;
+    font-size: 15px;
+    font-family: '微软雅黑', 'Arial';
+}
+
+#banner0_features {
+    position: absolute;
+    width: 61px;
+    height: 22px;
+    display: inline-block;
+    left: 912px;
+    top: 184px;
+    cursor: pointer;
+}
+
+#banner0_test {
+    position: absolute;
+    width: 85px;
+    height: 24px;
+    display: inline-block;
+    left: 856px;
+    top: 213px;
+    cursor: pointer;
+}
+
+#banner1_link {
+    position: absolute;
+    left: 640px;
+    top: 218px;
+}
+
+#banner1_img {
+    position: absolute;
+    left: 638px;
+    top: 98px;
+}
+
+#banner1_text {
+    position: absolute;
+    left: 638px;
+    top: 158px;
+    clear: both;
+    display: block;
+    font-size: 12px;
+    color: #999999;
+    padding-left: 17px;
+    line-height: 20px;
+    position: absolute;
+}
+
+
+.dict_r {
+    border: 1px solid #d7d7d7;
+    display: block;
+    padding: 2px;
+}
+
+#footer {
+    text-align: center;
+    margin: 45px auto 0;
+    color: #666666;
+    height: 200px;
+    background: #f5f5f5;
+    width: 100%;
+    border: 0;
+}
+
+.ftbox {
+    width: 100%;
+    line-height: 24px;
+    padding: 20px 0 0px 0;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ftbox a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.ftbox a:hover {
+    text-decoration: underline;
+}
+
+.face_cooper {
+    width: 510px;
+    height: 23px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.face_cooper_i {
+    width: 18px;
+    height: 14px;
+    background: url("https://imedl.sogoucdn.com/index/skin_icon.png") no-repeat 0 0;
+
+    margin-right: 7px;
+    margin-top: 5px;
+    float: left;
+}
+
+.face_cooper_w {
+    font-size: 16.24px;
+    color: #64696f;
+    font-family: "微软雅黑";
+    height: 23px;
+    float: left;
+}
+
+.face_cooper_w a {
+    font-size: 16.24px;
+    color: #64696f;
+    font-family: "微软雅黑";
+    height: 23px;
+}
+
+.wrapper {
+    width: 499px;
+    margin: 0 auto;
+    height: 295px;
+}

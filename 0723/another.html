@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        list-style: none;
+        border: 1px solid;
+    }
+
+    div {
+        width: 300px;
+        height: 248px;
+        position: absolute;
+        border: 1px solid;
+        top: 0;
+        display: none;
+        left: 100px;
+    }
+
+    li:hover div{
+        display: block;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>
+            <span>男装</span>
+            <div>
+                这就是男装
+            </div>
+        </li>
+        <li>
+            <span>女装</span>
+            <div>
+                这就是女装
+            </div>
+        </li>
+        <li>
+            <span>电器</span> 
+            <div>
+                这就是电器
+            </div>
+        </li>
+        <li>
+            <span>零食</span>
+            <div>
+                这就是零食
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

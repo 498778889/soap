@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    ul{
+        list-style-type: none;
+    }
+    .li_first{
+        float: left;
+    }
+    li {
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        list-style: none;
+        border: 1px solid;
+    }
+    .ul_second{
+        display: none;
+    }
+    .li_first:hover .ul_second{
+        display: block;
+    }
+    li:hover{
+        background: yellow;
+    }
+</style>
+<body>
+    <div>
+        <ul class="firstUL">
+            <li class="li_first">
+                <span>
+                    首页
+                </span>
+                <ul class="ul_second">
+                    <li>
+                        这是首页
+                    </li>
+                    <li>
+                        这是首页
+                    </li>
+                    <li>
+                        这是首页
+                    </li>
+                </ul>
+            </li>  
+            <li class="li_first">
+                <span>
+                    论坛
+                </span>
+                <ul class="ul_second">
+                    <li>
+                        这是论坛
+                    </li>
+                    <li>
+                        这是论坛
+                    </li>
+                    <li>
+                        这是论坛
+                    </li>
+                </ul>
+            </li>  
+            <li class="li_first">
+                <span>
+                    贴吧
+                </span>
+                <ul class="ul_second">
+                    <li>
+                        这是贴吧
+                    </li>
+                    <li>
+                        这是贴吧
+                    </li>
+                    <li>
+                        这是贴吧
+                    </li>
+                </ul>
+            </li>  
+            <li class="li_first">
+                <span>
+                    视频
+                </span>
+                <ul class="ul_second">
+                    <li>
+                        这是视频
+                    </li>
+                    <li>
+                        这是视频
+                    </li>
+                    <li>
+                        这是视频
+                    </li>
+                </ul>
+            </li>  
+            <li class="li_first">
+                <span>
+                    小说
+                </span>
+                <ul class="ul_second">
+                    <li>
+                        这是小说
+                    </li>
+                    <li>
+                        这是小说
+                    </li>
+                    <li>
+                        这是小说
+                    </li>
+                </ul>
+            </li>  
+        </ul>
+    </div>
+</body>
+</html>

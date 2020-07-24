@@ -1,0 +1,11 @@
+form 新增类型
+
+内联样式
+    在标签中通过style设置
+内部样式
+    在页面中写css
+    <style>
+    </style>
+外部样式
+    引入外部css
+    <link herf="" rel="stlyesheet" type="text/css">

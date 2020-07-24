@@ -1,0 +1,45 @@
+#box{
+    width: 700px;
+    height: 560px;
+    text-align:center;
+}
+#day{
+    width: 700px;
+    height: 60px;
+    line-height: 50px;   
+}
+.firstLine{
+    width: 100px;
+    height: 60px;
+    
+}
+.float_left{
+    float: left;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+}
+div span:first-child{
+    font-weight: 600;
+    line-height: 50px;
+    font-size: 20px;
+}
+.font_red{
+    color:red;
+}
+.font_grey{
+    color: gray;
+}
+.strong{
+    font: bolder;
+}
+.line{
+    border-top:1px solid gray;
+    width: 700px;
+    height: 100px;
+}
+#selected{
+    color: white;
+    background: orange;
+}

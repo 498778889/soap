@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>思诚学习报名表</title>
+</head>
+<style>
+    form{
+        width: 500px;
+        height: 800px;
+        margin: 0 auto;
+    }
+    input,meter{
+        width: 500px;
+        height: 30px;
+        margin: 10px 0;
+        font-size: 10px;
+        border-radius: 5px;
+        border: 1px solid;
+    }
+    
+</style>
+<body>
+    <form>
+        <fieldset oninput="mt.value=number.value;money.value=rg.value*120">
+            <legend>思诚学习报名表</legend>
+            <label for="name">姓名：</label>
+            <input type="text" id="name" placeholder="请输入姓名" required>
+
+            <label for="tel">手机号码：</label>
+            <input type="tel" id="tel" placeholder="请输入手机号码" required>
+
+            <label for="addr">家庭地址:</label>
+            <input type="text" id="addr" list="dlist" required>
+            <datalist id="dlist">
+                <option value="东湖区"></option>
+                <option value="青山湖区"></option>
+                <option value="西湖区"></option>
+                <option value="红谷滩新区"></option>
+                <option value="新建区"></option>
+            </datalist>
+
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" placeholder="请输入邮箱" required>
+
+            <label for="number">入学成绩：</label>
+            <input type="number" id="number" placeholder="请输入成绩" min="0" max="100" required>
+
+            <label for="mt">基础水平</label>
+            <meter id="mt" max="100" min="0" value="0" low="60" high="80" optimum="100"></meter>
+
+            <label for="rg">学习时长：$<output id="money">120</output>(120/一天)</label>
+            <input type="range" min="1" max="100" step="1" id="rg" value="1">
+
+            <label for="time">入学时间：</label>
+            <input type="date" id="time">
+            <input type="submit" value="提交">
+        </fieldset>
+    </form>
+</body>
+</html>

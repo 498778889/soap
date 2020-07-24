@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历表</title>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="box"> 
+        <div id="day">
+            <div class="firstLine float_left">
+                一
+            </div>
+            <div class="firstLine float_left">
+                二
+            </div>
+            <div class="firstLine float_left">
+                三
+            </div>
+            <div class="firstLine float_left">
+                四
+            </div>
+            <div class="firstLine float_left">
+                五
+            </div>
+            <div class="firstLine float_left font_red">
+                六
+            </div>
+            <div class="firstLine float_left font_red">
+                日
+            </div>
+        </div>
+        <div class="line">
+            <div class="cell float_left">
+                <span class="font_grey">29</span>
+                <br/>
+                <span class="font_grey">初九</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_grey">30</span>
+                <br>
+                <span class="font_grey">初十</span>
+            </div>
+            <div class="cell float_left">
+                <span>1</span>
+                <br>
+                <span class="font_red">建党节</span>
+            </div>
+            <div class="cell float_left">
+                <span>2</span>
+                <br>
+                <span class="font_grey">十二</span>
+            </div>
+            <div class="cell float_left">
+                <span>3</span>
+                <br>
+                <span class="font_grey">十三</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">4</span>
+                <br>
+                <span class="font_grey">十四</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">5</span>
+                <br>
+                <span class="font_grey">十五</span>
+            </div>
+        </div>
+        <div class="line">
+            <div class="cell float_left">
+                <span>6</span>
+                <br>
+                <span class="font_red">小暑</span>
+            </div>
+            <div class="cell float_left">
+                <span>7</span>
+                <br>
+                <span class="font_red">高考</span>
+            </div>
+            <div class="cell float_left">
+                <span>8</span>
+                <br>
+                <span class="font_grey">十八</span>
+            </div>
+            <div class="cell float_left">
+                <span>9</span>
+                <br>
+                <span class="font_grey">十九</span>
+            </div>
+            <div class="cell float_left">
+                <span>10</span>
+                <br>
+                <span class="font_grey">二十</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">11</span>
+                <br>
+                <span class="font_grey">廿一</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">12</span>
+                <br>
+                <span class="font_grey">廿二</span>
+            </div>
+        </div>
+        <div class="line">
+            <div class="cell float_left">
+                <span>13</span>
+                <br>
+                <span class="font_grey">廿三</span>
+            </div>
+            <div class="cell float_left">
+                <span>14</span>
+                <br>
+                <span class="font_grey">廿四</span>
+            </div>
+            <div class="cell float_left">
+                <span>15</span>
+                <br>
+                <span class="font_grey">廿五</span>
+            </div>
+            <div class="cell float_left">
+                <span>16</span>
+                <br>
+                <span class="font_grey">廿六</span>
+            </div>
+            <div class="cell float_left">
+                <span>17</span>
+                <br>
+                <span class="font_grey">廿七</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">18</span>
+                <br>
+                <span class="font_grey">廿八</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">19</span>
+                <br>
+                <span class="font_grey">廿九</span>
+            </div>
+        </div>
+        <div class="line">
+            <div class="cell float_left">
+                <span>20</span>
+                <br>
+                <span class="font_grey">三十</span>
+            </div>
+            <div class="cell float_left" id="selected">
+                <span>21</span>
+                <br>
+                <span>初一</span>
+            </div>
+            <div class="cell float_left">
+                <span>22</span>
+                <br>
+                <span class="font_red">大暑</span>
+            </div>
+            <div class="cell float_left">
+                <span>23</span>
+                <br>
+                <span class="font_grey">初三</span>
+            </div>
+            <div class="cell float_left">
+                <span>24</span>
+                <br>
+                <span class="font_grey">初四</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">25</span>
+                <br>
+                <span class="font_grey">初五</span>
+            </div>
+            <div class="cell float_left">
+                <span class="font_red">26</span>
+                <br>
+                <span class="font_grey">初六</span>
+            </div>
+        </div>
+        <div class="line">
+            <div class="cell float_left">
+                <span>27</span>
+                <br>
+                <span class="font_grey">初七</span>
+            </div>
+            <div class="cell float_left">
+                <span>28</span>
+                <br>
+                <span class="font_grey">初八</span>
+            </div>
+            <div class="cell float_left">
+                <span>29</span>
+                <br>
+                <span class="font_grey">初九</span>
+            </div>
+            <div class="cell float_left">
+                <span>30</span>
+                <br>
+                <span class="font_grey">初十</span>
+            </div>
+            <div class="cell float_left">
+                <span>31</span>
+                <br>
+                <span class="font_grey">十一</span>
+            </div>
+            <div class="cell float_left">
+                <span  class="font_grey">1</span>
+                <br>
+                <span class="font_grey">建军节</span>
+            </div>
+            <div class="cell float_left">
+                <span  class="font_grey">2</span>
+                <br>
+                <span class="font_grey" >十三</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

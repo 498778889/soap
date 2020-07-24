@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link href="./css/layui.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <form action="./login.html" method="POST"
+            style="width: 1000px;margin: 0 auto;margin-top: 200px; padding:50px;border: #0C0C0C 1px solid;border-radius: 10px;">
+            <span style="font-size: 30px;margin: 0 auto;display: block;padding: 9px 15px;width: 80px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;">
+                注册
+            </span>
+            <div style="margin: 20px">
+                <span class="layui-form-label">用户名</span>
+                <div class="layui-input-block">
+                    <input type="text" name="userName" id="userName" class="layui-input" />
+                </div>
+            </div>
+
+            <div style="margin: 20px">
+                <span class="layui-form-label">密码</span>
+                <div class="layui-input-block">
+                    <input type="password" name="password" id="password" class="layui-input">
+                </div>
+            </div>
+
+            <div style="margin: 20px">
+                <span class="layui-form-label">确认密码</span>
+                <div class="layui-input-block">
+                    <input type="password" name="checkPassword" id="checkPassword" class="layui-input">
+                </div>
+            </div>
+
+            <div style="margin: 20px">
+                <span class="layui-form-label">邮箱</span>
+                <div class="layui-input-block">
+                    <input type="email" name="email" id="email" class="layui-input" />
+                </div>
+            </div>
+
+            <div style="margin: 20px">
+                <span class="layui-form-label">手机号码</span>
+                <div class="layui-input-block">
+                    <input type="tel" name="tel" id="tel" class="layui-input" />
+                </div>
+            </div>
+
+            <div style="margin: 20px">
+                <span class="layui-form-label">性别</span>
+                <div class="layui-input-block">
+                    <div class="radio">
+                        <input type="radio" id="radio-1" name="sex" value="1" checked />
+                        <label for="radio-1" class="radio-label">男</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio-2" name="sex" value="0" />
+                        <label for="radio-2" class="radio-label">女</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio-3" name="sex" value="2" />
+                        <label for="radio-3" class="radio-label">保密</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 20px" class="layui-form-item">
+                <span class="layui-form-label">地址</span>
+                <div class="layui-input-inline">
+                    <select id="province" class="layui-select">
+                        <option value="1">北京</option>
+                        <option value="2">江西</option>
+                        <option value="3">广西</option>
+                    </select>
+                    <span class="layui-form-label" style="width: 100px;">省(自治区、直辖市)</span>
+                </div>
+                <div class="layui-input-inline">
+                    <select id="city" class="layui-select">
+                        <option value="1">北京</option>
+                        <option value="2">南昌</option>
+                        <option value="3">柳州</option>
+                    </select>
+                    <span class="layui-form-label">市</span>
+                </div>
+                <div class="layui-input-inline">
+                    <select id="sector" class="layui-select">
+                        <option value="1">海淀</option>
+                        <option value="2">青山湖</option>
+                        <option value="3">柳北</option>
+                    </select>
+                    <span class="layui-form-label">区(县)</span>
+                </div>
+
+
+            </div>
+
+
+            <a href="./login.html" class="layui-btn" style="float: right">去登录</a>
+            <input type="submit" name="confirm" id="confirm" class="layui-btn" style="float: right;margin-right: 20px"
+                value="注册">
+            <input type="reset" value="重置" class="layui-btn" style="float: right;margin-right: 20px" value="重置" />
+        </form>
+
+    </div>
+</body>
+
+</html>

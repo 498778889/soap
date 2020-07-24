@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 580px;
+        height: 340px;
+        border: 1px solid;
+        background: black;
+    }
+    .box>div{
+        width: 150px;
+        height: 300px;
+        border: 1px solid;
+        float: left;
+        margin: 20px;
+        background: url("./gameKing.jpg") ;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        border-radius: 20px ;
+    }
+    .box>div:hover{
+        border: 5px solid gold;
+    }
+    #square{
+        width: 600px;
+        height: 300px;
+        border-radius: 0 0 300px 300px;
+        background: blue;
+        
+    }
+</style>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="square"></div>
+</body>
+</html>

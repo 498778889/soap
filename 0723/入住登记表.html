@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+    input{
+        width: 500px;
+        height: 40px;
+        margin: 10px 0;
+        font-size: 20px; 
+    }
+    
+</style>
+<body>
+    <form oninput="day.value=rg.value;money.value=day.value*500;">
+        <fieldset>
+            <legend>入住登记</legend>
+
+            <label for="userName">入住人姓名:</label>
+            <input type="text" placeholder="请输入姓名" id="userName" required>
+            
+            <label for="addr">入住地址:</label>
+            <input type="text" id="addr" list="dlist" placeholder="请输入地址" required>
+            <datalist id="dlist">
+                <option value="东湖区"></option>
+                <option value="青山湖区"></option>
+                <option value="西湖区"></option>
+                <option value="红谷滩新区"></option>
+                <option value="新建区"></option>
+            </datalist>
+          
+            <label for="rg">入住天数:<output id="day">1</output>天</label>
+            <input type="range" max="30" step="1" min="1" value="1" id="rg">
+            <label for="rg">入住总金额:<output id="money">500</output>(500一天)</label>
+            <br><br>
+            <label for="tel">联系电话:</label>
+            <input type="tel" id="tel" placeholder="请输入电话" required>
+            <input type="submit" value="提交登记">
+        </fieldset>
+    </form>
+</body>
+</html>
