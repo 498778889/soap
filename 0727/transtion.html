@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    div {
+        width: 200px;
+        height: 50px;
+        background: red;
+        margin: 10px;
+        transition-property: width background-color border-radius position height line-height float margin;
+        transition-delay: 0s;
+        transition-duration: 1s;
+        text-align: center;
+        line-height: 50px;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    div:nth-of-type(1) {
+        transition-timing-function: ease;
+    }
+
+    div:nth-of-type(2) {
+        transition-timing-function: ease-in
+    }
+
+    div:nth-of-type(3) {
+        transition-timing-function: ease-out
+    }
+
+    div:nth-of-type(4) {
+        transition-timing-function: ease-in-out
+    }
+
+    div:nth-of-type(5) {
+        transition-timing-function: linear
+    }
+
+    body:active>div {
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        border-radius: 50px;
+        line-height: 100px;
+        margin: 0;
+    }
+
+    body:active>div:nth-of-type(1) {
+        top: 100px;
+        right: -400px;
+    }
+
+    body:active>div:nth-of-type(2) {
+        top: 0px;
+        right: -500px;
+    }
+
+    body:active>div:nth-of-type(3) {
+        right: -600px;
+        top: -100px;
+    }
+
+    body:active>div:nth-of-type(4) {
+        right: -700px;
+        top: -200px;
+    }
+
+    body:active>div:nth-of-type(5) {
+        right: -800px;
+        top: -300px;
+    }
+
+    div:nth-of-type(1):hover {
+        width: 800px;
+        background-color: blue;
+    }
+
+    div:nth-of-type(2):hover {
+        width: 800px;
+        background-color: green;
+    }
+
+    div:nth-of-type(3):hover {
+        width: 800px;
+        background-color: orangered;
+    }
+
+    div:nth-of-type(4):hover {
+        width: 800px;
+        background-color: yellow;
+    }
+
+    div:nth-of-type(5):hover {
+        width: 800px;
+        background-color: purple;
+    }
+</style>
+
+<body>
+    <div>
+        ease
+    </div>
+    <div>
+        ease-in
+    </div>
+    <div>
+        ease-out
+    </div>
+    <div>
+        ease-in-out
+    </div>
+    <div>
+        linear
+    </div>
+    
+</body>
+
+</html>

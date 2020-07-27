@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: slategrey;
+    }
+    div{
+        width: 180px;
+        height: 280px;
+        background: url("./pk.png");
+        margin: 200px auto;
+        transition: 1s linear all;
+        transform-origin: top right;
+        position: absolute;
+        top: 100px;
+        left: 500px;
+        border-radius: 5%;
+    }
+    div:nth-of-type(1){
+        z-index: 999;
+    }
+    div:nth-of-type(1):hover{
+        transform: rotate(0deg);
+    }
+    div:nth-of-type(1):hover~div:nth-of-type(2){
+        transform: rotate(60deg);
+    }
+    div:nth-of-type(1):hover~div:nth-of-type(3){
+        transform: rotate(120deg);
+    }
+    div:nth-of-type(1):hover~div:nth-of-type(4){
+        transform: rotate(180deg);
+    }
+    div:nth-of-type(1):hover~div:nth-of-type(5){
+        transform: rotate(240deg);
+    }
+    div:nth-of-type(1):hover~div:nth-of-type(6){
+        transform: rotate(300deg);
+    }
+</style>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

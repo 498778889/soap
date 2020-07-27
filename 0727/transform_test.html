@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 600px;
+        right: 600px;
+        background-color: red;
+        text-align: center;
+        line-height: 100px;
+        transition: linear 0.5s all;
+    }
+
+    #click {
+        z-index: 999;
+    }
+
+    #click:hover~div:nth-of-type(2) {
+        background-color: rosybrown;
+        transform: translate(-400px,-500px) rotate(360deg);
+    }
+
+    #click:hover~div:nth-of-type(3) {
+        
+        background-color: royalblue;
+        transform: translate(-200px,-500px) skew(-180deg);
+    }
+
+    #click:hover~div:nth-of-type(4) {
+        transform: translate(0px,-500px) scale(1.5);
+        background-color: sandybrown;
+        border-radius: 100px;
+    }
+
+    #click:hover~div:nth-of-type(5) {
+        transform: translate(200px,-500px) skew(180deg);
+        background-color: tomato;
+    }
+
+    #click:hover~div:nth-of-type(6) {
+        transform: translate(400px,-500px) rotate(-360deg);
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div id="click">
+        <span>点它</span>
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+</body>
+
+</html>
