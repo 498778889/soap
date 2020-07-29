@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body>div {
+        width: 300px;
+        height: 300px;
+        border: 1px none;
+        margin: 100px auto;
+        transform-style: preserve-3d;
+        transform: rotate3d(0, 0, 0, 0deg);
+        transition: all 1000s linear;
+    }
+    body:hover>div{
+        transform: rotate3d(1, 1, 1, -360deg);
+    }
+    body>div>div {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        line-height: 300px;
+        font-size: 24px;
+        position: absolute;
+    }
+
+    body>div>div:nth-of-type(1) {
+
+        background: rgb(125, 210, 86, .5);
+        transform: translateZ(150px);
+
+    }
+
+    body>div>div:nth-of-type(2) {
+
+        background: rgb(225, 93, 10, .5);
+        transform: translateZ(-150px);
+
+    }
+
+    body>div>div:nth-of-type(3) {
+
+        background: rgba(86, 144, 210, 0.5);
+        transform: translateY(150px) rotateX(90deg);
+
+    }
+
+    body>div>div:nth-of-type(4) {
+
+        background: rgba(173, 24, 179, 0.5);
+        transform: translateY(-150px) rotateX(90deg);
+
+    }
+
+    body>div>div:nth-of-type(5) {
+
+        background: rgba(232, 245, 56, 0.5);
+        transform: translateX(150px) rotateY(90deg);
+
+    }
+
+    body>div>div:nth-of-type(6) {
+
+        background: rgba(10, 211, 225, 0.5);
+        transform: translateX(-150px) rotateY(90deg);
+
+    }
+</style>
+
+<body>
+    <div>
+        <div>
+            A
+        </div>
+        <div>
+            B
+        </div>
+        <div>
+C
+        </div>
+        <div>
+D
+        </div>
+        <div>
+E
+        </div>
+        <div>
+F
+        </div>
+    </div>
+</body>
+
+</html>

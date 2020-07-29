@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+div{
+    width: 840px;
+    height: 160px;
+    background: cornflowerblue;
+    margin: 200px auto;
+    overflow: hidden;
+}
+ul{
+    width: 200%;
+    height: 80px;
+    padding: 40px 0;
+    animation: move 10s linear 0s infinite normal ;
+    
+}
+li{
+    width: 120px;
+    height: 80px;
+    background: red;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    float: left;
+    margin: 0 10px;
+    transition: linear all 0.5s;
+}
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-840px);
+    }
+
+}
+ul:hover{
+    animation-play-state: paused;
+}
+li:hover{
+    transform: scale(1.2);
+
+}
+</style>
+<body>
+    <div>
+        <ul>
+            <li>
+                江
+            </li>
+            <li>
+                西
+            </li>
+            <li>
+                思
+            </li>
+            <li>
+                诚
+            </li>
+            <li>
+                科
+            </li>
+            <li>
+                技
+            </li>
+            <li>
+                江
+            </li>
+            <li>
+                西
+            </li>
+            <li>
+                思
+            </li>
+            <li>
+                诚
+            </li>
+            <li>
+                科
+            </li>
+            <li>
+                技
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

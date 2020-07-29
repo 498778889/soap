@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body>div>div {
+        background: rgb(66, 66, 233);
+        width: 620px;
+        height: 200px;
+        position: relative;
+        margin: 200px auto;
+        overflow: hidden;
+    }
+
+    body>div>div>div {
+        width: 100px;
+        height: 70px;
+        background: crimson;
+        line-height: 70px;
+        text-align: center;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+    }
+    /* body>div>div>div:hover{
+        transform: scale(3);
+    } */
+    body>div>div>div:nth-of-type(1) {
+        animation: move1 10s linear 0s infinite normal backwards;
+    }
+
+    body>div>div>div:nth-of-type(2) {
+        animation: move2 10s linear 0s infinite normal backwards;
+    }
+
+    body>div>div>div:nth-of-type(3) {
+        animation: move3 10s linear 0s infinite normal backwards;
+    }
+
+    body>div>div>div:nth-of-type(4) {
+        animation: move4 10s linear 0s infinite normal backwards;
+    }
+
+    body>div>div>div:nth-of-type(5) {
+        animation: move5 10s linear 0s infinite normal backwards;
+    }
+
+    body>div>div>div:nth-of-type(6) {
+        animation: move6 10s linear 0s infinite normal backwards;
+    }
+
+    @keyframes move1 {
+        0% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(620px, -50%);
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            transform: translate(20px, -50%);
+        }
+
+        83.2% {
+            transform: translate(620px, -50%);
+        }
+
+        83.3% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(20px, -50%);
+        }
+    }
+
+    @keyframes move3 {
+        0% {
+            transform: translate(140px, -50%);
+        }
+
+        66.6% {
+            transform: translate(620px, -50%);
+        }
+
+        66.7% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(140px, -50%);
+        }
+    }
+
+    @keyframes move4 {
+        0% {
+            transform: translate(260px, -50%);
+        }
+
+        50% {
+            transform: translate(620px, -50%);
+        }
+
+        50.1% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(260px, -50%);
+        }
+    }
+
+    @keyframes move5 {
+        0% {
+            transform: translate(380px, -50%);
+        }
+
+        33.3% {
+            transform: translate(620px, -50%);
+        }
+
+        33.4% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(380px, -50%);
+        }
+    }
+
+    @keyframes move6 {
+        0% {
+            transform: translate(500px, -50%);
+        }
+
+        16.6% {
+            transform: translate(620px, -50%);
+        }
+
+        16.7% {
+            transform: translate(-100px, -50%);
+        }
+
+        100% {
+            transform: translate(500px, -50%);
+        }
+    }
+</style>
+
+<body>
+    <div>
+        <div>
+            <div id="d1" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                江
+            </div>
+            <div id="d2" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                西
+            </div>
+            <div id="d3" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                思
+            </div>
+            <div id="d4" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                诚
+            </div>
+            <div id="d5" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                科
+            </div>
+            <div id="d6" onmouseover="this.style.transform='scale('+1.5+')';paused();"
+                onmouseout="this.style.transform='scale('+0+')';running();">
+                技
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function paused() {
+            document.getElementById("d1").style.animationPlayState = 'paused';
+            document.getElementById("d2").style.animationPlayState = 'paused';
+            document.getElementById("d3").style.animationPlayState = 'paused';
+            document.getElementById("d4").style.animationPlayState = 'paused';
+            document.getElementById("d5").style.animationPlayState = 'paused';
+            document.getElementById("d6").style.animationPlayState = 'paused';
+
+        }
+
+        function running() {
+            document.getElementById("d1").style.animationPlayState = 'running';
+            document.getElementById("d2").style.animationPlayState = 'running';
+            document.getElementById("d3").style.animationPlayState = 'running';
+            document.getElementById("d4").style.animationPlayState = 'running';
+            document.getElementById("d5").style.animationPlayState = 'running';
+            document.getElementById("d6").style.animationPlayState = 'running';
+
+        }
+    </script>
+</body>
+
+</html>
