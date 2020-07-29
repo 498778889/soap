@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城</title>
+</head>
+<script>
+    var obj = new Object();
+    var discount = 0;
+
+    function fun() {
+        var name = document.getElementById("name").value;
+        var sex;
+        if (document.getElementById("man").checked) {
+            sex = document.getElementById("man").value;
+        } else if (document.getElementById("women").checked) {
+            sex = document.getElementById("women").value;
+        }
+        var age = document.getElementById("age").value;
+        var salary = document.getElementById("salary").value;
+        obj.name = name;
+        obj.sex = sex;
+        obj.age = age;
+        obj.salary = salary;
+        console.log(obj);
+
+        switch (Number(sex)) {
+            case 1: {
+                if (salary < 1000) {
+                    document.getElementById("message").innerHTML = "高级会员(九折)";
+                    discount = 0.9;
+                } else if (salary < 3000 && salary >= 1000) {
+                    document.getElementById("message").innerHTML = "超级会员(八折)";
+                    discount = 0.8;
+                } else if (salary < 6000 && salary >= 3000) {
+                    document.getElementById("message").innerHTML = "至尊会员(七折)";
+                    discount = 0.7;
+                } else if (salary >= 6000) {
+                    document.getElementById("message").innerHTML = "巅峰会员(六折)";
+                    discount = 0.6;
+                }
+                break;
+            }
+            case 2: {
+                if (age < 18) {
+                    document.getElementById("message").innerHTML = "高级会员(九折)";
+                    discount = 0.9;
+                } else if (age < 26 && age >= 18) {
+                    document.getElementById("message").innerHTML = "超级会员(八折)";
+                    discount = 0.8;
+                } else if (age < 35 && age >= 26) {
+                    document.getElementById("message").innerHTML = "至尊会员(七折)";
+                    discount = 0.7;
+                } else if (age >= 35) {
+                    document.getElementById("message").innerHTML = "巅峰会员(六折)";
+                    discount = 0.6;
+                }
+                break;
+            }
+        }
+        document.getElementById('box').style.display = 'block';
+        document.getElementById('cart').style.display = 'block';
+    }
+
+    function buy() {
+        var carMoney = document.getElementById('car').value * 1000000;
+        var boatMoney = document.getElementById('boat').value * 10000000;
+        var bagMoney = document.getElementById('bag').value * 200;
+        var total = (carMoney + boatMoney + bagMoney) * discount;
+        document.getElementById('pay').innerHTML = total;
+        document.getElementById('payMessage').style.display = 'block';
+    }
+</script>
+<style>
+    #box,
+    #payMessage,
+    #cart {
+        display: none;
+    }
+    body>div{
+        width: 800px;
+        margin: 20px auto;
+    }
+</style>
+
+<body>
+    <div>
+        <fieldset>
+            <legend>用户信息</legend>
+            <label>用户姓名</label><input type="text" id="name"><br>
+            <label>用户性别</label>
+            <input type="radio" value="1" name="sex" id="man"><span>男</span>
+            <input type="radio" value="2" name="sex" id="women"><span>女</span><br>
+            <label>年龄</label><input type="number" id="age" min="0"><br>
+            <label>用户工资</label><input type="number" id="salary" min="0"><br>
+            <input type="button" value="确定" onclick="fun()">
+        </fieldset>
+        <div id="box">
+            <span>你已经是
+                <span id="message"></span>
+            </span>了
+        </div>
+        <div id="cart">
+            <fieldset>
+                <legend>商品</legend>
+                <label for="car">跑车(1000000元)</label><input type="number" id="car" min="0" value="0"><br>
+                <label for="boat">游艇(10000000元)</label></label><input type="number" id="boat" min="0" value="0"><br>
+                <label for="bag">书包(200元)</label></label><input type="number" id="bag" min="0" value="0"><br>
+                <button onclick="buy()">购买</button>
+                <div id="payMessage">
+                    您的消费是:
+                    <span id="pay"></span>
+                    元
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+</body>
+
+</html>

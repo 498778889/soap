@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var obj = new Object();
+    function fun(){
+        var name = document.getElementById("name").value;
+        var sex;
+        if(document.getElementById("man").checked){
+            sex = document.getElementById("man").value;
+        }else if(document.getElementById("women").checked){
+            sex = document.getElementById("women").value;
+        }
+        var age = document.getElementById("age").value;
+        var salary = document.getElementById("salary").value;
+        obj.name = name;
+        obj.sex = sex;
+        obj.age = age;
+        obj.salary = salary;
+        console.log(obj);
+        if(salary<1000){
+            document.getElementById("message").innerHTML="就这？";
+        }else if(salary<3000&&salary>=1000){
+            document.getElementById("message").innerHTML="要我教你做事?";
+        }else if(salary<6000&&salary>=3000){
+            document.getElementById("message").innerHTML="可以";
+        }
+        else if(salary>=6000){
+            document.getElementById("message").innerHTML="66666";
+        }
+    }
+</script>
+
+<body>
+    <label>用户姓名</label><input type="text" id="name"><br>
+    <label>用户性别</label>
+    <input type="radio" value="1" name="sex" id="man"><span>男</span>
+    <input type="radio" value="2" name="sex" id="women"><span>女</span><br>
+    <label>年龄</label><input type="number" id="age"><br>
+    <label>用户工资</label><input type="number" id="salary"><br>
+    <input type="button" value="确定" onclick="fun()">
+    <br>
+    <span id ="message"></span>
+</body>
+
+</html>
