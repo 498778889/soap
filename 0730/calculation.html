@@ -12,20 +12,20 @@
     var b = Number(prompt("请输入第二个数字"));
     var total = 0;
 
-    function charge() {
+    function charge(a,sign,b) {
         if (!isNaN(a) && !isNaN(b)) {
             switch (sign) {
                 case '+':
-                    plus();
+                    plus(a,b);
                     break;
                 case '-':
-                    minus();
+                    minus(a,b);
                     break;
                 case '*':
-                    times();
+                    times(a,b);
                     break;
                 case '/':
-                    divide();
+                    divide(a,b);
                     break;
                 default:
                     alert('不是正常运算符');
@@ -36,22 +36,22 @@
 
     }
 
-    function plus() {
+    function plus(a,b) {
         total = a + b;
         document.write(a, '+', b, '=', total);
     }
 
-    function minus() {
+    function minus(a,b) {
         total = a - b;
         document.write(a, '-', b, '=', total);
     }
 
-    function times() {
+    function times(a,b) {
         total = a * b;
         document.write(a, '*', b, '=', total);
     }
 
-    function divide() {
+    function divide(a,b) {
         if (b === 0) {
             alert('除零错误');
             document.write(a, '/', b, '=', 'NaN');
@@ -61,7 +61,7 @@
         }
 
     }
-    charge();
+    charge(a,sign,b);
 </script>
 
 <body>

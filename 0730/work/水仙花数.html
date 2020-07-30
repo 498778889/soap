@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水仙花数</title>
+</head>
+<script>
+    function waterFlower(){
+        for(var i=100;i<1000;i++){
+            var hundred = parseInt(i.toString().substring(0,1));
+            var ten = parseInt(i.toString().substring(1,2));
+            var per = parseInt(i.toString().substring(2,3));
+            if(i==(Math.pow(hundred,3)+Math.pow(ten,3)+Math.pow(per,3))){
+                document.write(i+"<br>");
+            }
+        }
+    }
+    waterFlower();
+</script>
+<body>
+    
+</body>
+</html>

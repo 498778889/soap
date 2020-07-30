@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+</head>
+<script>
+    function guess() {
+        alert('接下来是第1关，你有6次机会，范围0-100');
+        if (level(1)) {
+            alert('接下来是第2关，你有3次机会，范围0-50');
+            if (level(2)) {
+                alert('接下来是第3关，你只有一次机会，范围0-10');
+                if (level(3)) {
+                    alert('恭喜通关！重来请刷新页面！');
+                } else {
+                    alert('遗憾！止步第3关！重来请刷新页面！');
+                }
+            } else {
+                alert('遗憾！止步第2关！重来请刷新页面！');
+            }
+        } else {
+            alert('遗憾！止步第1关！重来请刷新页面！');
+        }
+    }
+
+
+    function level(lv) {
+        var num;
+        var flag = false;
+        var times = 0;
+        switch (lv) {
+            case 1:
+                times = 6;
+                num = Math.floor(Math.random() * 101);
+                break;
+            case 2:
+                times = 3;
+                num = Math.floor(Math.random() * 51);
+                break;
+            case 3:
+                times = 1;
+                num = Math.floor(Math.random() * 11);
+                break;
+        }
+        for (var i = 0; i < times; i++) {
+            var x = Number(prompt('请输入猜的数'));
+            if (x == num) {
+                alert('猜对了！');
+                flag = true;
+                break;
+            } else if (x > num) {
+                alert('大了！');
+            } else if (x < num) {
+                alert('小了!');
+            }
+        }
+        alert('正确答案是:' + num);
+        return flag;
+    }
+    guess();
+</script>
+
+<body>
+
+</body>
+
+</html>
