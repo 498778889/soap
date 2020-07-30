@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var a = Number(prompt("请输入第一个数字"));
+    var sign = prompt("请输入符号");
+    var b = Number(prompt("请输入第二个数字"));
+    var total = 0;
+
+    function charge() {
+        if (!isNaN(a) && !isNaN(b)) {
+            switch (sign) {
+                case '+':
+                    plus();
+                    break;
+                case '-':
+                    minus();
+                    break;
+                case '*':
+                    times();
+                    break;
+                case '/':
+                    divide();
+                    break;
+                default:
+                    alert('不是正常运算符');
+            }
+        }else{
+            alert('不是数字');
+        }
+
+    }
+
+    function plus() {
+        total = a + b;
+        document.write(a, '+', b, '=', total);
+    }
+
+    function minus() {
+        total = a - b;
+        document.write(a, '-', b, '=', total);
+    }
+
+    function times() {
+        total = a * b;
+        document.write(a, '*', b, '=', total);
+    }
+
+    function divide() {
+        if (b === 0) {
+            alert('除零错误');
+            document.write(a, '/', b, '=', 'NaN');
+        } else {
+            total = a / b;
+            document.write(a, '/', b, '=', total);
+        }
+
+    }
+    charge();
+</script>
+
+<body>
+
+</body>
+
+</html>

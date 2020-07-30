@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function method01() {
+        alert('普通方法');
+    }
+    
+    var method02 = function () {
+        alert('匿名方法');
+    }  
+    var method03 = new Function('alert("对象函数")');
+
+    function fn01(a){
+        alert(a);
+    }
+    
+    method01();
+    method02();
+    method03();
+    fn01('c');
+</script>
+
+<body>
+
+</body>
+
+</html>
