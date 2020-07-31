@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arr=[3,6,7,9,2,1,5,8,4];
+    document.write(arr.shift()+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.unshift(3,3,3,3)+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.pop()+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.push(4,4,4)+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.splice(4,4,4)+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.reverse()+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.concat(arr.reverse())+'<br>');
+    document.write(arr+'<hr>');
+    document.write(arr.sort()+'<br>');//字母顺序
+    document.write(arr+'<hr>');
+    document.write(arr.sort(function(a,b){return b-a})+'<br>');//比值函数
+    document.write(arr+'<hr>');
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arr = new Array(33, 56, 12, 26, 87, 53, 48, 69);
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 50) {
+            arr[i] = true;
+        }
+        document.write(arr[i] + "<br>");
+    }
+    document.write("<hr>");
+    //------------------------------------------
+    var arr2 = [33, 92, 64, 26, 76, 53, 49, 28];
+    var max = arr[0],
+        min = arr[0],
+        temp = 0;
+    for (var i = 0; i < arr2.length; i++) {
+        temp = arr2[i];
+        if (temp > max) {
+            max = temp;
+        }
+        if (temp < min) {
+            min = temp;
+        }
+
+    }
+    document.write(max, ",", min);
+    document.write("<hr>");
+
+    //------------------------------------------
+    temp = 0;
+    for (var i = 0; i < arr2.length; i++) {
+        for (var j = 0; j < arr2.length - 1; j++) {
+            if (arr2[j] > arr2[j + 1]) {
+                temp = arr2[j];
+                arr2[j] = arr2[j + 1];
+                arr2[j + 1] = temp;
+            }
+        }
+    }
+    //arr[index]=arr[index]+arr[arr.length-1];
+    //arr[arr.length-1] =arr[index]-arr[arr.length-1];
+    //arr[index]=arr[index]-arr[arr.length-1];
+    document.write(arr2 + "<br>");
+    document.write("<hr>");
+    //------------------------------------------
+    var arr3 = [33, 92, 64, 26, 76, 53, 49, 28];
+    document.write(arr3 + "<br>");
+    temp = 0;
+    var index = 0
+    for (var i = 0; i < arr3.length; i++) {
+        if (arr3[index] > arr3[i]) {
+            index = i;
+        }
+    }
+    temp = arr3[index];
+    arr3[index] = arr3[0];
+    arr3[0] = temp;
+    document.write(arr3 + "<br>");
+    document.write("<hr>");
+    //------------------------------------------
+</script>
+
+<body>
+
+</body>
+
+</html>
