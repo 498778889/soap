@@ -1,0 +1,76 @@
+
+js中的数组(array)：
+    用于存储一系列值的容器。数组中存储的值被称之为元素
+    可以通过索引获取其中的任意元素。
+    索引就是一些数字
+    数组容器：[4,true,'张三',1000]
+    索引值：   0  1     2     3
+
+
+js创建数组：
+    var arr = new Array();
+    var arr = [4,true,'张三',1000];
+
+
+-------------------------------------------------
+
+js中的BOM(浏览器对象模型)：
+    window：js的最顶层对象，其他所有的 BOM 对象都是 window 的属性
+    document：文档对象
+    location：浏览器当前url信息
+    history：浏览器访问历史信息
+    navigator：浏览器本身信息
+    screen：客户端屏幕信息
+
+------------------------------------
+
+window
+    alert('提示信息') 提示弹框 没有返回值
+    prompt('弹出输入框') 输入弹框 会返回用户输入信息
+    confirm('确认信息') 确认弹框 会返回布尔值
+    定时函数：
+    setTimeout(函数,时间)
+    setInterval(函数,时间)
+    clearTimeout()/clearInterval()
+
+location
+    hostname：返回web主机名
+    pathname：返回当前页面路径
+    port：返回web主机端口号
+    protocol：返回使用的 web 协议
+    href：返回当前 url
+
+
+history
+    back() 加载前一个 url
+    forward() 加载下一个 url
+    go() 加载指定 url
+    go(-1) == back(),go(1) == forward()
+
+--------------------------------------
+
+document
+    getElementById()  通过 id 获取元素节点
+    getElementsByName()  通过 name 获取元素节点
+
+-----------------------------------------
+
+作业：
+1，背 js 的数组概念，js的BOM对象模型中的对象
+
+2，制作一个页面，实时显示当前时间，每隔一秒刷新一次
+    并且页面中只有一行时间
+    使用 setInterval()/ var date = new Date();当前时间
+        document.open() 刷新页面文本流
+    选择拓展(选作)：可以添加定时功能
+        prompt('请输入分钟')
+        date.getMinutes();
+
+3，选作：可以完成一个页面有四个复选框，和三个按钮
+        三个按钮分别为：全选，全不选，反选
+        点击全选，所有复选框为 checked == true
+        点击全不选，所有复选框为 checked == false
+        点击反选，所有复选框为 checked == true 改 false， false 改 true
+
+4，预习，js中的事件，js 的DOM 
+
