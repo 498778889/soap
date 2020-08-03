@@ -12,6 +12,7 @@
         var date = new Date();
         document.getElementById('date').innerHTML = date;
         if(date.getMinutes()==minute){
+            clearInterval(timer);
             alert('当前时间:'+date);
         }
     }, 1000);

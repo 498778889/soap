@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    onload = function () {
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            var newType = prompt('请输入新品种的名字');
+            var ul = document.querySelector('ul');
+            var newLi = document.createElement('li');
+            var text = document.createTextNode(newType);
+            newLi.appendChild(text);
+            ul.appendChild(newLi);
+        }
+    }
+</script>
+
+<body>
+    <h1>思诚奶茶店</h1>
+    <button>点我添加新品种</button>
+    <ul>
+        <li>java</li>
+        <li>ui</li>
+        <li>web</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    div {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        background-color: red;
+    }
+
+    li {
+        position: relative;
+        top: 550px;
+        width: 30px;
+        left: 520px;
+        height: 30px;
+        border-radius: 30px;
+        background: rgba(228, 228, 238, 0.365);
+        float: left;
+        margin-left: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    li:hover {
+        background: rgba(228, 228, 238, 0.765);
+        transform: scale(1.2);
+    }
+</style>
+<script>
+    function changeActivity(i) {
+        var div = document.querySelector("div");
+        switch (i) {
+            case 0:
+                div.style.backgroundColor = 'red';
+                break;
+            case 1:
+                div.style.backgroundColor = 'springgreen';
+                break;
+            case 2:
+                div.style.backgroundColor = 'yellow';
+                break;
+            case 3:
+                div.style.backgroundColor = 'grey';
+                break;
+            case 4:
+                div.style.backgroundColor = 'orange';
+                break;
+            default:
+                div.style.backgroundColor = 'red';
+        }
+
+    }
+    onload = function () {
+        var li = document.querySelectorAll('li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('onmouseover', 'changeActivity(' + i + ')');
+
+        }
+    }
+</script>
+
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

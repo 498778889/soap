@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="d1">
+        我是div
+    </div>
+    <p>我是p</p>
+    <span class="sp">
+        我是span
+    </span>
+    <input type="checkbox" value="c++" name="hobby"><span>c++</span>
+    <input type="checkbox" value="java" name="hobby"><span>java</span>
+    <input type="checkbox" value="python" name="hobby"><span>python</span>
+    <input type="checkbox" value="ruby" name="hobby"><span>ruby</span>
+    <br>
+</body>
+<script>
+    onload = function () {
+        var d1 = document.getElementById('d1');
+        
+        var cb = document.getElementsByName('hobby');
+
+        var pp = document.getElementsByTagName('p');
+
+        var sp = document.getElementsByClassName('sp');
+
+        var qD1 = document.querySelector('#d1');
+
+        var qcb = document.querySelector('input[name=hobby]:nth-of-type(3)');
+
+        var qcbList = document.querySelectorAll('[name=hobby]');
+
+        
+
+        console.log(d1,cb,pp,sp,qD1,qcb,qcbList);
+
+        console.log(sp[0].childNodes[0].nodeType);
+    }
+</script>
+
+</html>
