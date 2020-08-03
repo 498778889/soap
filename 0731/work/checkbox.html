@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function a() {
+        var el = document.getElementsByName('hobby');
+        for (var i = 0; i < el.length; i++) {
+            if (!el[i].checked) {
+                el[i].checked = true;
+            } 
+        }
+    }
+    function b() {
+        var el = document.getElementsByName('hobby');
+        for (var i = 0; i < el.length; i++) {
+            if (el[i].checked) {
+                el[i].checked = false;
+            } 
+        }
+    }
+    function c() {
+        var el = document.getElementsByName('hobby');
+        for (var i = 0; i < el.length; i++) {
+            if (el[i].checked) {
+                el[i].checked = false;
+            } else {
+                el[i].checked = true;
+            }
+        }
+    }
+</script>
+<body>
+    <input type="checkbox" value="c++" name="hobby"><span>c++</span>
+    <input type="checkbox" value="java" name="hobby"><span>java</span>
+    <input type="checkbox" value="python" name="hobby"><span>python</span>
+    <input type="checkbox" value="ruby" name="hobby"><span>ruby</span>
+    <br>
+    <button onclick="a()">全选</button>
+    <button onclick="b()">全不选</button>
+    <button onclick="c()">反选</button>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function a() {
+        var sex;
+        var el = document.getElementsByName('sex')
+        for (var i = 0; i < el.length; i++) {
+            if (el[i].checked) {
+                sex = el[i].value;
+                break;
+            }
+        }
+        console.log(sex);
+        alert(sex);
+    }
+
+    function b() {
+        var hobby = new Array();
+        var el = document.getElementsByName('hobby');
+        for (var i = 0; i < el.length; i++) {
+            if (el[i].checked) {
+                hobby.push(el[i].value);
+            }
+        }
+        console.log(hobby);
+        alert(hobby);
+    }
+
+    function c() {
+        var select = document.getElementById('select').value;
+        alert(select);
+    }
+
+    function change() {
+        var el = document.getElementsByName('hobby');
+        for (var i = 0; i < el.length; i++) {
+            if (el[i].checked) {
+                el[i].checked = false;
+            } else {
+                el[i].checked = true;
+            }
+        }
+    }
+</script>
+
+<body>
+    <input type="radio" value="男" name="sex" checked><span>男</span>
+    <input type="radio" value="女" name="sex"><span>女</span>
+    <input type="radio" value="保密" name="sex"><span>保密</span>
+    <hr>
+    <input type="checkbox" value="c++" name="hobby"><span>c++</span>
+    <input type="checkbox" value="java" name="hobby"><span>java</span>
+    <input type="checkbox" value="python" name="hobby"><span>python</span>
+    <hr>
+    <select id="select">
+        <option value="1">南昌</option>
+        <option value="2">上海</option>
+        <option value="3">北京</option>
+    </select>
+    <button onclick="a()">单选</button>
+    <button onclick="b()">多选</button>
+    <button onclick="c()">下拉列表</button>
+    <button onclick="change()">多选改变</button>
+</body>
+
+</html>
