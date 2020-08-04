@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    onload=function(){
+        console.log($('div'));
+        console.log($('#first'));
+        console.log($('.gogogo'));
+        console.log($('*'));
+        console.log($('li[name=five]'));
+        console.log($('div #first'));
+        console.log($('#first+li'));
+        console.log($('#first~li'));
+        console.log($('div>ul'));
+        console.log($('li:nth-of-type(-n+5)'));
+    }
+</script>
+<body>
+    <div>
+        <ul>
+            <li id="first">1</li>
+            <li class="gogogo">2</li>
+            <li class="gogogo">3</li>
+            <li class="gogogo">4</li>
+            <li name="five">5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+</body>
+</html>

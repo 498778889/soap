@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    div {
+        width: 1000px;
+        height: 425px;
+        margin: 0 auto;
+        background: url("./images/for1.jpg") no-repeat center center;
+        transition: all 1s linear;
+    }
+
+    li {
+        position: relative;
+        top: 380px;
+        width: 30px;
+        left: 600px;
+        height: 30px;
+        border-radius: 30px;
+        background: rgba(228, 228, 238, 0.365);
+        float: left;
+        margin-left: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+</style>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    var count = 0;
+
+    function timerFunc() {
+
+        changeActivity(count);
+        count++;
+        if (count == 6) {
+            count = 0;
+        }
+
+    }
+
+    function changeActivity(i) {
+        if (i != count) {
+            count = i;
+        }
+        var li = $('li');
+        var div = $("div");
+        for (var j = 0; j < li.length; j++) {
+            if (j != i) {
+                li[j].style = 'background: rgba(228, 228, 238, 0.365);transform: scale(1);'
+            }
+            if (i == j) {
+                li[j].style = 'background: rgba(228, 228, 238, 0.765);transform: scale(1.2);'
+            }
+        }
+
+        switch (i) {
+            case 0:
+                div.css({
+                    'background': 'url("./images/for1.jpg") no-repeat center center'
+                });
+                break;
+            case 1:
+                div.css({
+                    'background': 'url("./images/for2.jpg") no-repeat center center'
+                });
+                break;
+            case 2:
+                div.css({
+                    'background': 'url("./images/for3.jpg") no-repeat center center'
+                });
+                break;
+            case 3:
+                div.css({
+                    'background': 'url("./images/for4.jpg") no-repeat center center'
+                });
+                break;
+            case 4:
+                div.css({
+                    'background': 'url("./images/for5.jpg") no-repeat center center'
+                });
+                break;
+            case 5:
+                div.css({
+                    'background': 'url("./images/for6.jpg") no-repeat center center'
+                });
+                break;
+            default:
+                div.css({
+                    'background': 'url("./images/for1.jpg") no-repeat center center'
+                });
+        }
+
+    }
+    onload = function () {
+        var li = $('li');
+        var timer = setInterval('timerFunc()', 2000);
+        for (var i = 0; i < li.length; i++) {
+            li[i].setAttribute('onclick', 'changeActivity(' + i + ')');
+            li[i].onmouseover = function () {
+                this.style = 'cursor:pointer';
+                clearInterval(timer);
+            }
+            li[i].onmouseout = function () {
+                timer = setInterval('timerFunc()', 2000);
+            }
+        }
+
+    }
+</script>
+
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+
+</html>
