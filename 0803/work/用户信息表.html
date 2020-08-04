@@ -15,23 +15,7 @@
         border: 1px solid black;
     }
 
-    tr>td:nth-of-type(4) {
-        color: blue;
-    }
-
-    tr>td:nth-of-type(4):hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-
-    tbody>tr>td:nth-of-type(4) {
-        color: black;
-    }
-
-    tbody>tr>td:nth-of-type(4):hover {
-        text-decoration: none;
-        cursor: auto;
-    }
+    
 </style>
 
 <body>
@@ -85,7 +69,13 @@
             td4.onclick = function () {
                 table.removeChild(tr);
             }
-
+            td4.style='cursor:pointer;color:blue';
+            td4.onmouseover=function(){
+                td4.style.textDecoration='underline';
+            }
+            td4.onmouseout=function(){
+                td4.style.textDecoration='none';
+            }
         }
 
     }
