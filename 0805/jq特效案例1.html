@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq特效案例1</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    div {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    div>ul>li {
+        float: left;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+
+    }
+
+    li {
+        text-align: center;
+        display: block;
+        width: 100px;
+        height: 40px;
+        border: 1px dashed black;
+        box-sizing: border-box;
+        line-height: 40px;
+    }
+
+    span+ul {
+        display: none;
+    }
+</style>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        var span = $('span');
+        for (var i = 0; i < span.length; i++) {
+            var sp = span.eq(i);
+            sp.hover(function () {
+                // over
+                $(this).next().slideDown();
+            }, function () {
+                // out
+                $(this).next().slideUp();
+            });
+        }
+    })
+</script>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <span>微博</span>
+                <ul>
+                    <li>关注</li>
+                    <li>关注</li>
+                    <li>关注</li>
+                </ul>
+            </li>
+            <li>
+                <span>微博</span>
+                <ul>
+                    <li>关注</li>
+                    <li>关注</li>
+                    <li>关注</li>
+                </ul>
+            </li>
+            <li>
+                <span>微博</span>
+                <ul>
+                    <li>关注</li>
+                    <li>关注</li>
+                    <li>关注</li>
+                </ul>
+            </li>
+            <li>
+                <span>微博</span>
+                <ul>
+                    <li>关注</li>
+                    <li>关注</li>
+                    <li>关注</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

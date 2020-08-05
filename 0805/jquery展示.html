@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    //入口函数
+    $(document).ready(function () {
+        console.log('入口函数1');
+    });
+    $(function () {
+        console.log('入口函数2');
+        var ul = document.querySelector('ul');
+        var $ul = $('ul');
+        console.log(ul, $ul);
+
+        var $ul2 = $(ul); //js==>jq
+        var ul2 = $ul[0]; //jq==>js
+        console.log(ul2, $ul2);
+    }) //真不错
+</script>
+
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

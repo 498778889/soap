@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .demo {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        border-radius: 100px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 50px;
+
+    }
+    
+</style>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        var $div = $('div').eq(0);
+        var btn1 = $('button').eq(0);
+        var btn2 = $('button').eq(1);
+        var btn3 = $('button').eq(2);
+        var btn4 = $('button').eq(3);
+        var btn5 = $('button').eq(4);
+        var btn6 = $('button').eq(5);
+        var btn7 = $('button').eq(6);
+        var btn8 = $('button').eq(7);
+        var btn9 = $('button').eq(8);
+        var btn10 = $('button').eq(9);
+        $div.addClass('demo');
+        //$div.attr('onclick','alert("wdmnd")');
+        btn1.click(function () {
+            $div.hide(1000,alert('即将隐藏'),function(){
+                alert('消失')
+            });
+        })
+        btn2.click(function () {
+            $div.show(1000,alert('即将显示'),function(){
+                alert('已显示')
+            });
+        })
+        btn3.click(function () {
+            $div.toggle();
+        })
+        btn4.click(function () {
+            $div.fadeOut();
+        })
+        btn5.click(function () {
+            $div.fadeIn();
+        })
+        btn6.click(function () {
+            $div.fadeToggle();
+        })
+        btn7.click(function () {
+            $div.slideUp();
+        })
+        btn8.click(function () {
+            $div.slideDown();
+        })
+        btn9.click(function () {
+            $div.slideToggle();
+        })
+        btn10.click(function () {
+            $div.animate({
+                width:'500px',
+                height:'600px',
+                borderRadius:'0px'
+            },1000);
+        })
+    })
+</script>
+
+<body>
+
+    <div>点按钮</div>
+    <div>
+        <span>无动画</span><button>点我隐藏</button><button>点我显示</button><button>点我切换</button><br>
+        <span>淡入淡出</span> <button>点我隐藏</button><button>点我显示</button><button>点我切换</button><br>
+        <span>上下滑动</span><button>点我隐藏</button><button>点我显示</button><button>点我切换</button><br>
+        <span>看动画</span><button>点我看动画</button>
+    </div>
+
+
+
+</body>
+
+</html>
