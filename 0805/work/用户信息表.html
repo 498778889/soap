@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息表</title>
+</head>
+<style>
+    table,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div>
+        <span>ID:</span><input type="text" id="id">
+        <span>姓名:</span><input type="text" id="name">
+        <span>电话:</span><input type="tel" id="tel">
+        <button>保存</button>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Tel</td>
+                <td>操作</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        $('button').on({
+            'click': function () {
+                var td1 = $('<td>' + $('#id').val() + '</td>');
+                var td2 = $('<td>' + $('#name').val() + '</td>');
+                var td3 = $('<td>' + $('#tel').val() + '</td>');
+                var td4 = $('<td>删除</td>');
+                var tr = $('<tr></tr>');
+                tr.append(td1, td2, td3, td4);
+                $('table').append(tr);
+                td4.css({
+                    'cursor': 'pointer',
+                    'color': 'blue'
+                })
+                td4.on({
+                    'click': function () {
+                        $(this).parent().remove();
+                    },
+                    'mouseenter': function () {
+                        $(this).css('textDecoration', 'underline')
+                    },
+                    'mouseleave': function () {
+                        $(this).css('textDecoration', 'none')
+                    }
+                })
+
+            }
+        })
+    })
+</script>
+
+</html>

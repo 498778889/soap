@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        var $name = $('#name');
+        var $btn = $('button');
+        var $ul = $('ul');
+        $btn.click(function () {
+            var $li = $('<li>' + $name.val() + '</li>');
+            $ul.append($li);
+        })
+        $ul.on({
+            'click': function () {
+                $(this).css('color', 'blue');
+            }
+        }, 'li');
+    })
+</script>
+
+<body>
+    <span>请输入添加值</span><input type="text" id="name"><button>保存</button>
+    <ul>
+        <li>java</li>
+        <li>c++</li>
+    </ul>
+</body>
+
+</html>

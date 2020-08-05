@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛留言</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #box {
+        width: 800px;
+        height: 400px;
+        margin: 100px auto;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    #box>div:first-child {
+        width: 400px;
+        height: 110px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    textarea {
+        width: 250px;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    #message {
+        width: 400px;
+        margin: 0 auto;
+    }
+</style>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+
+        var $btn = $('button');
+        var $message = $('#message');
+        $btn.on({
+            'click': function () {
+                var $textarea = $('textarea');
+                var $span1 = $('<span>' + $textarea.val() + '</span>');
+                var $span2 = $('<span>删除</span>');
+                var $p = $('<p></p>');
+                $span2.css({
+                    'float': 'right',
+                    'cursor': 'pointer',
+                    'color': 'blue'
+                });
+                $span2.on({
+                    'click': function () {
+                        $(this).parent().remove();
+                    },
+                    'mouseenter': function () {
+                        $(this).css('textDecoration', 'underline')
+                    },
+                    'mouseleave': function () {
+                        $(this).css('textDecoration', 'none')
+                    }
+                });
+                $p.append($span1, $span2);
+                $message.append($p);
+            }
+        })
+    })
+</script>
+
+<body>
+    <div id="box">
+        <div>
+            <span>论坛留言</span>
+            <textarea></textarea>
+            <button>发布</button>
+        </div>
+
+        <div id="message">
+
+        </div>
+    </div>
+</body>
+
+</html>

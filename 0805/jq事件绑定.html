@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery事件绑定</title>
+</head>
+<script src="./jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        var $div = $('div');
+        // $div.on('click', function () {
+        //     $(this).css('background', 'red');
+        // })
+        // $div.on('mouseenter', function () {
+        //     $(this).css('background', 'blue');
+        // })
+        // $div.on('mouseleave', function () {
+        //     $(this).css('background', 'yellow');
+        // })
+        $div.on({
+            'click': function () {
+                $(this).css('background', 'red');
+            },
+            'mouseenter': function () {
+                $(this).css('background', 'blue');
+            },
+            'mouseleave': function () {
+                $(this).css('background', 'yellow');
+            }
+        })
+    })
+</script>
+<style>
+    div {
+        width: 500px;
+        height: 500px;
+        background-color: springgreen;
+        transition: all 1s linear;
+    }
+</style>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>
